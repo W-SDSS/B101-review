@@ -13,3 +13,23 @@ Your program should ask the user for
 * The program will calculate the amount of interest earned and display it.
 * Appropriate formatting of the output is a requirement for this assignment
 """
+
+P = float(input("The number of an initial investment: "))
+r = float(input("The annual interest rate (%): "))
+time = float(input("The length of time:"))
+unit = str(input("What is the unit for time (year, month, day):"))
+
+r = r/100
+
+if unit == "year":
+  t = time
+elif unit == "month":
+  t = time/12
+elif unit == "day":
+  t = time/365
+else:
+  print("invalid value")
+
+I = P*r*t
+
+print(I)
