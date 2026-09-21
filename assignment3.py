@@ -22,3 +22,19 @@ rate: 5%
 10 years
 final balance: 1320.68
 """
+
+annual_investment = float(input("The annual investment: "))
+r = float(input("The annual interest rate (as a percentage): "))
+t = int(input("The number of years: "))
+
+r = r/100
+w = 0
+year = 1
+
+while year <= t:
+    w = w + annual_investment
+    interest = w * r
+    w = w + interest
+    year = year + 1
+
+print("Final balance: ", round(w, 2))

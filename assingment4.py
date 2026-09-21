@@ -22,3 +22,21 @@ How many months will it take him to pay off the car.  How much interest has he p
 He will have paid 21711.60 in interest
 """
 
+initial = float(input("An initial debt: "))
+r = float(input("The monthly interest rate: "))
+payment = float(input("The monthly payment: "))
+
+r = r/100
+debt = initial
+total_interest = 0
+month = 0
+
+while debt > 0:
+    interest = debt*r
+    total_interest = total_interest + interest
+    debt = debt + interest
+    debt = debt - payment
+    month = month + 1
+
+print("debt will have paid in", month, "month")
+print("debt will have paid", round(total_interest, 2), "in interest.")
