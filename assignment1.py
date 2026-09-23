@@ -12,6 +12,7 @@ Your program should ask the user for
   * the user should have the option of entering in the length of time in years, months or days
 * The program will calculate the amount of interest earned and display it.
 * Appropriate formatting of the output is a requirement for this assignment
+w
 """
 
 P = float(input("The number of an initial investment: "))
